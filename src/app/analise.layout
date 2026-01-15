@@ -1,0 +1,12 @@
+Analise de layout figma FAW.
+
+-Temos 3 seções de paginas.
+-Na primeira seção temos: um wallpaper de fundo, sobre o wallpaper existe
+uma div que contem a logo do projeto, textos 3 inputs, nome, email, telefone
+e um button.
+-Segunda seção: texto de para prender o usuario, 4 paineis citando vantagens
+para quem garantir sua inscrição adiantada e o mesmo button do formulario.
+-Terceira seção: explica o publico alvo e o que o usuario pode esperar ao 
+lançamento.
+
+coisas que se repetem: o button verde.
