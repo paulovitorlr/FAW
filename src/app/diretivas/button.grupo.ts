@@ -12,6 +12,8 @@ export class BtnGrupotDirective implements OnInit{
   ngOnInit(): void {
     //padrão de layout
     this.el.style.background = 'linear-gradient(135deg, #7BF17D 0%, #279D1C 100%)';
-    this.el.style.padding = '40px'
+    this.el.style.padding = '23.5px 112.5px'
+    this.el.style.border = '1px, solid, #7BF17D'
+    this.el.style.borderRadius = '5px'
 }
 }

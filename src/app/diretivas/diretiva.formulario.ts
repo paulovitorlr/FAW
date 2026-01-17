@@ -1,30 +1,32 @@
 import { Directive, ElementRef, inject, OnInit } from "@angular/core";
-import { elementAt } from "rxjs";       
 
 @Directive({
     selector: '[divTransparent]',
     standalone: true
 })
+export class divTransparentDirective implements OnInit {
 
-export class divTransparentDirective implements OnInit{
     el = inject(ElementRef).nativeElement as HTMLElement;
 
-  ngOnInit(): void {
-    //padrão de layout
-    this.el.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
-    this.el.style.height = '758px';
-    this.el.style.width = '578px';
-    //configuração da div
-    this.el.style.display = 'flex';
-    this.el.style.justifyContent = 'center';
-    this.el.style.flexDirection = 'column';
+    ngOnInit(): void {
 
-    // Impedir que a imagem estoure
-    const img = this.el.querySelector("img") as HTMLImageElement;
-    if (img) {
-        img.style.maxWidth = "30%";
-        img.style.height = "auto";
+        // Fundo gradiente
+        this.el.style.backgroundImage =
+            'linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(72,71,71,0.1))';
+
+        // Borda gradiente sem a parte inferior
+        this.el.style.borderTop = '1.5px solid transparent';
+        this.el.style.borderLeft = '1.5px solid transparent';
+        this.el.style.borderRight = '1.5px solid transparent';
+        this.el.style.borderBottom = '0';
+        this.el.style.borderImage =
+            'linear-gradient(to bottom, rgba(72,71,71,1), rgba(72,71,71,0.1)) 1';
+        this.el.style.borderImageSlice = '1';
         
+
+        // Flex interno
+        this.el.style.display = 'flex';
+        this.el.style.flexDirection = 'column';
+        this.el.style.alignItems = 'center';
     }
-}
 }
