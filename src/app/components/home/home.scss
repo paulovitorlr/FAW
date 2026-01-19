@@ -1,5 +1,5 @@
 .main-section {
-    min-height: 100vh;
+     -height: 100vh;
     width: 100%;
 
     .Hero {
@@ -76,9 +76,70 @@
     }
 
     .about-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        background-color: #000;
+        
+        .p1{
+          font-family: 'Montserrat', sans-serif; 
+            font-size: 30px; 
+            font-weight: 500;
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        .p2{
+          font-family: 'Montserrat', sans-serif; 
+            font-size: 30px; 
+            font-weight: 500;
+            color: #FFFFFF;
+            text-align: center;
+
+            margin-bottom: 64px;
+  
+            span{
+                color:#F49612
+            }
+        }
+        .texto-about{
+          font-family: 'Montserrat', sans-serif; 
+            font-size: 16px; 
+            font-weight: 400;
+            color: #FFFFFF;
+            text-align: center;
+
+            margin-bottom: 34px;
+        }
         .about-flex {
             display: flex;
             flex-direction: row;
+            gap: 23px;
+
+            .bloco-1{
+                margin-bottom: 23px;
+            }
+            .bloco-2{
+                margin-bottom: 23px;
+            }
+            .divisao,.divisao2{
+                margin-bottom: 64px;
+            }
+            
+            .fraseEfeito{
+                font-family: 'inter', 'Montserrat', sans-serif;
+                font-size: 23px;
+                font-weight: 700;
+                color: #FFFFFF;
+            }
+            .frase{
+                font-family: 'inter', 'Montserrat', sans-serif;
+                font-size: 15px;
+                font-weight: 500;
+                color: #FFFFFF;
+            }
         }
     }
 }
