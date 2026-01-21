@@ -142,6 +142,44 @@
             }
         }
     }
+
+    .footer-section {
+        width: 100%;
+        height: auto;
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
+        gap: 24px;
+
+        .footerFundo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+        .p1{
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 20px; 
+            font-weight: 500;
+            color: #FFFFFF;
+            text-align: center;
+            
+            
+        }
+
+        .p2{
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 16px; 
+            font-weight: 400;
+            color: #FFFFFF;
+            text-align: center;
+            margin-top: 50px;
+        }
+    }
 }
 
 /* RESPONSIVO */
@@ -154,6 +192,24 @@
         .transparent {
             width: 90%;
             height: auto;
+        }
+    }
+    
+}
+
+@media (max-width: 761px) {
+    .about-section {
+        .about-flex {
+            flex-direction: column !important;
+            align-items: center;
+            .divisao {
+                margin-bottom: 0px !important // menor para mobile
+            }
+
+            
+            .divisao2 {
+                margin-bottom: 30px  // menor para mobile
+            }
         }
     }
 }
