@@ -1,22 +1,27 @@
+
 .main-section {
   width: 100%;
+  overflow-x: hidden;
 
   /* =========================
-     HERO — MOBILE FIRST
+     HERO 
   ========================= */
   .Hero {
     width: 100%;
     min-height: 100vh;
 
     display: flex;
-    justify-content: center;
+    justify-content:center;
+    
 
-    padding: 0 16px;
+    
 
     background-image: url('S:/FAW_prj/FAW/public/svg/background.hero.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    overflow-x: hidden;
+
+    
+    
   }
 
   .transparent {
@@ -86,17 +91,55 @@
     }
   }
 
+  .faw-strip {
+          width: 100%;
+          height: 20px;
+          
+          
+          overflow: hidden;
+          background-color: #000;
+
+          border: 1px solid #999;
+
+          
+
+          .strip-bg {
+            width: 200%;
+            height: 100%;
+
+            background-image: url('../../../../public/svg/FAW.logotipo.svg') !important;
+            background-repeat: space ;
+            background-size: auto 100%;
+            background-position: left center;
+
+            opacity: 0.4;
+
+            animation: scroll 18s linear infinite;
+
+          }
+        }
+        @keyframes scrollStrip {
+          from {
+          transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+
  
 
   /* =========================
      ABOUT
   ========================= */
-  .about-section { display: flex;
+  .about-section { 
+    display: flex;
      flex-direction: column;
       align-items: center;
        justify-content:center;
          background-color: #000;
      .p1{
+      margin-top: 20px;
          font-family: 'Montserrat', sans-serif;
          font-size: 30px;
           font-weight: 500;
@@ -104,7 +147,8 @@
             text-align: center;
          } 
          .p2{ font-family: 'Montserrat', sans-serif;
-             font-size: 30px;
+             
+          font-size: 30px;
               font-weight: 500;
                color: #FFFFFF;
                 text-align: center;
@@ -147,6 +191,9 @@
                                                    color: #FFFFFF; 
                                                 } 
                                             }
+                                            button{
+                                              margin-bottom: 50px;
+                                            }
                                          }
 
   /* =========================
@@ -184,7 +231,14 @@
                                  margin-top: 50px;
                                  }
                                  }
+
+        
 }
+ 
+
+
+
+
 
 
  /* =========================
@@ -195,12 +249,22 @@
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       padding: 0 40px;
+
+      
     }
 
     .transparent {
       grid-column: 8 / span 4;
       margin-top: 150px;
     }
+  }
+
+
+  @media (max-width: 1682px){
+    .Hero{
+      background-position: 25% center ;
+    }
+    
   }
 
 /* =========================
@@ -214,3 +278,5 @@
     }
   }
 }
+
+
